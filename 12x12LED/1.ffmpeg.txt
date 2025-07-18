@@ -1,0 +1,1 @@
+ffmpeg -i badapple.mp4 -vf "fps=10,scale=12:12,format=gray" frames/frame_%04d.png

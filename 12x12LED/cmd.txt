@@ -1,0 +1,1 @@
+i=0; while true; do if [ $i -gt 100 ]; then i=0; fi; f="txt1/frame_000$i.txt"; if [ $i -ge 10 ]; then f="txt1/frame_00$i.txt"; fi; if [ $i -ge 100 ]; then f="txt1/frame_0$i.txt"; fi; /system/bin/cat "$f" > /sys/class/xr-led/device/eoy; echo 1 > /sys/class/xr-led/device/led; sleep 0.1; i=$((i+1)); done
